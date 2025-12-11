@@ -14,7 +14,7 @@ export default function Stronauzyt() {
 	async function resolveID(value) {
 		const isSteamID64 = /^[0-9]{17}$/.test(value);
 		if (isSteamID64) return value;
-		const res = await fetch(`/api/resolve?name=${value}`);
+		const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}api/resolve?name=${value}`);
 		const data = await res.json();
 		if (data.response.success === 1) {
 			return data.response.steamid;
@@ -22,7 +22,7 @@ export default function Stronauzyt() {
 		throw new Error("Nie znaleziono profilu o takiej nazwie.");
 	}
 	async function fetchProfile(steamId) {
-		const res = await fetch(`/api/profile?id=${steamId}`);
+		const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}api/profile?id=${steamId}`);
 		const data = await res.json();
 		const p = data.response.players[0];
 		if (!p) throw new Error("Nie udało się pobrać danych tego użytkownika.");
@@ -70,7 +70,7 @@ export default function Stronauzyt() {
 			</Button>
 						<div className="info">
 						<h2>{profile.name}</h2>
-						<h2>Prawdziwe imie: {profile.rname}</h2>
+						<h2>Prawdziwe imie: {profile.rname || "Nie podano"}</h2>
 						<p>
 							<strong>Kraj pochodzenia: </strong> {profile.country}
 						</p>

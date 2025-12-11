@@ -7,7 +7,7 @@ export default function AvatarPage() {
     const [avatar, setAvatar] = useState("");
     useEffect(() => {
         async function load() {
-            const res = await fetch(`/api/profile?id=${id}`);
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}api/profile?id=${id}`);
             const data = await res.json();
             const p = data.response.players[0];
             setAvatar(p.avatarfull);
