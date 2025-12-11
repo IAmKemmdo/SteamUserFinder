@@ -43,26 +43,3 @@ body {
   object-fit: cover;
   border: 3px solid rgba(255,255,255,0.2);
 }
-
-.info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.info h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.info p {
-  margin: 6px 0;
-  font-size: 18px;
-}
-
-.profile-buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-  justify-content: center;
-}

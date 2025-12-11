@@ -1,4 +1,4 @@
-import "./Style/Glowna.css"
+import "../style/Glowna.css"
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";

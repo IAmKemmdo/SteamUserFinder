@@ -1,6 +1,6 @@
 import React, { use, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../pages/Style/Stronauzyt.css"
+import "../style/StronaUzyt.css"
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
