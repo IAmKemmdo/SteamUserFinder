@@ -1,3 +1,4 @@
+```
 SteamUserFinder/
 ├── .gitignore
 ├── bun.lock
@@ -29,3 +30,4 @@ SteamUserFinder/
 │ └── StronaUzyt.css
 ├── vercel.json
 └── vite.config.js
+```
